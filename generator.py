@@ -5,15 +5,12 @@ Student ID: 301075627
 File description: Generates and displays sentences using simple grammar and vocabulary. Words are chosen at random.
 """
 
-#importing information from txt files
 
 
 import random
-articles = ("A", "THE")
-nouns = ("BOY", "GIRL", "BAT", "BALL",)
-verbs = ("HIT", "SAW", "LIKED")
-prepositions = ("WITH", "BY")
 
+
+#generated the getwords method
 def getWords(filename):
     source = open(filename)
     temporary = list()
@@ -26,9 +23,10 @@ def getWords(filename):
 
     return words
 
+#importing information from txt files
 articles = getWords("articles.txt")
 nouns = getWords("nouns.txt")
-prepostions = getWords("prepositions.txt")
+prepositions = getWords("prepositions.txt")
 verbs = getWords("verbs.txt")
 
 
@@ -52,6 +50,7 @@ def prepositionalPhrase():
 def main():
     """Allows the user to input the number of sentences
     to generate."""
+    print(random.choice(articles))
     number = int(input("Enter the number of sentences: "))
     for count in range(number):
         print(sentence())
