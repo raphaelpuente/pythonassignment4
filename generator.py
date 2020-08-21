@@ -14,7 +14,22 @@ nouns = ("BOY", "GIRL", "BAT", "BALL",)
 verbs = ("HIT", "SAW", "LIKED")
 prepositions = ("WITH", "BY")
 
+def getWords(filename):
+    source = open(filename)
+    temporary = list()
+    for line in source:
+        line = line.strip()
+        temporary.append(line)
 
+    words = tuple(temporary)
+    source.close()
+
+    return words
+
+articles = getWords("articles.txt")
+nouns = getWords("nouns.txt")
+prepostions = getWords("prepositions.txt")
+verbs = getWords("verbs.txt")
 
 
 
