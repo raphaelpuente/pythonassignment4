@@ -1,14 +1,22 @@
 """
-Program: generator.py
-Generates and displays sentences using simple grammar
-and vocabulary. Words are chosen at random.
+Filename: generator.py
+Author: Raphael Puente
+Student ID: 301075627
+File description: Generates and displays sentences using simple grammar and vocabulary. Words are chosen at random.
 """
+
+#importing information from txt files
+
 
 import random
 articles = ("A", "THE")
 nouns = ("BOY", "GIRL", "BAT", "BALL",)
 verbs = ("HIT", "SAW", "LIKED")
 prepositions = ("WITH", "BY")
+
+
+
+
 
 def sentence():
     """Builds and returns a sentence."""
